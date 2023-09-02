@@ -1,0 +1,20 @@
+CREATE TABLE homeGrounds(
+    id int PRIMARY KEY AUTO_INCREMENT,
+    ground_name varchar(50),
+    capacity int
+);
+
+CREATE TABLE footballClubs(
+    clubName varchar(50) PRIMARY KEY,
+    nickname varchar(50),
+    home_ground int,
+    FOREIGN KEY (home_ground) REFERENCES homeGrounds(id)
+);
+
+INSERT INTO homeGrounds (name, capacity) VALUES ("Old Trafford", 74310);
+
+INSERT INTO homeGrounds (name, capacity) VALUES ("St. James' Park", 52000);
+
+INSERT INTO footballClubs (name, nickname) VALUES ("Manchester United", "The Red Devils");
+
+INSERT INTO footballClubs (name, nickname) VALUES ("Newcastle United", "The Magpies");

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page</title>
+    <link rel="stylesheet" href="styles.css" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  </head>
+  <body>
+	<h1>Two Tables Demo</h1>
+	
+	<table id="clubsTable">
+	  <tr>
+		<th>Club Name</th>
+		<th>Club Nickname</th>
+	  </tr>
+	</table>
+	<input type="button" value="View clubs data" onclick="controller.viewClubsData()" />
+
+	<table id="groundsTable">
+	  <tr>
+		<th>Ground Name</th>
+		<th>Capacity</th>
+	  </tr>
+	</table>
+	<input type="button" value="View grounds data" onclick="controller.viewGroundsData()" />	
+	
+	<table id="allDataTable">
+	  <tr>
+		<th>Club Name</th>
+		<th>Club Nickname</th>
+		<th>Home Ground</th>
+		<th>Capacity</th>
+	  </tr>
+	</table>	
+	<input type="button" value="View all data" onclick="controller.viewAllData()" />
+	
+	<script src="index.js"></script>
+  </body>
+</html>
