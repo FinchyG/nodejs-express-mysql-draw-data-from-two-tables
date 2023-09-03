@@ -1,5 +1,6 @@
 table {
   border-collapse: collapse;
+  box-shadow: 0.2rem, 0.2rem, 0.1rem, rgba(14, 56, 97, 0.2);
 }
 
 th {
@@ -7,13 +8,13 @@ th {
 }
 
 th, td {
-  border: 0.2rem solid rgba(104, 113, 120, 0.7);
+  border: 0.1rem solid rgba(104, 113, 120, 0.2);
 }
 
 tr:nth-child(even) {
-  background-color: rgba(197, 210, 221, 0.5);
+  background-color: rgba(197, 210, 221, 0.2);
 }
 
 tr:nth-child(odd) {
-  background-color: rgba(100, 177, 235, 0.5);
+  background-color: rgba(100, 177, 235, 0.2);
 }
