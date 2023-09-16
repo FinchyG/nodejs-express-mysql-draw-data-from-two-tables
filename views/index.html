@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -17,25 +17,25 @@
 		<th>Club Nickname</th>
 	  </tr>
 	</table>
-	<input type="button" value="View clubs data" onclick="controller.viewClubsData()" />
+	<button onclick="controller.viewClubsData()">View clubs data</button>
 
-	<table id="groundsTable">
-	  <tr>
-		<th>Ground Name</th>
-		<th>Capacity</th>
-	  </tr>
-	</table>
-	<input type="button" value="View grounds data" onclick="controller.viewGroundsData()" />	
-	
-	<table id="allDataTable">
-	  <tr>
-		<th>Club Name</th>
-		<th>Club Nickname</th>
-		<th>Home Ground</th>
-		<th>Capacity</th>
-	  </tr>
-	</table>	
-	<input type="button" value="View all data" onclick="controller.viewAllData()" />
-	
-  </body>
+		<table id="groundsTable">
+			<tr>
+				<th><b>Ground Name</b></th>
+				<th><b>Capacity</b></th>
+			</tr>
+		</table>
+		<button onclick="controller.viewGroundsData()">View grounds data</button>
+
+		<table id="allDataTable">
+			<tr>
+				<th>Club Name</th>
+				<th>Club Nickname</th>
+				<th>Home Ground</th>
+				<th>Capacity</th>
+			</tr>
+		</table>
+		<button onclick="controller.viewAllData()">View all data</button>
+
+</body>
 </html>

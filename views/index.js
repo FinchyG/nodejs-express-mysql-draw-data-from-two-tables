@@ -1,24 +1,19 @@
-// Execute in strict mode
+// execute in strict mode
 "use strict";
 
-// Declare a loginChecker object for use by the HTML view
+// declare a loginChecker object for use by the HTML view
 var controller;
 
-// Variable to store API base URL
+// variable to store API base URL
 var BASE_URL = 'http://localhost:4000/twoTables/';
 
-// variables to store references to html tables
-var clubsTable = document.getElementById("clubsTable");
-var groundsTable = document.getElementById("groundsTable");
-var allDataTable = document.getElementById("allDataTable");
-        
 window.addEventListener("load", () => {
-// Create the TwoTables object for use by the HTML view
+// create the TwoTables object for use by the HTML view
 controller = new TwoTables();
             });
 function TwoTables() {
 
-  // Functions to return model data
+  // functions to return model data
 
   function getClubsData() {
     
@@ -26,12 +21,14 @@ function TwoTables() {
       
       // check that data has been received and then display in html table
       if (data) {
-      // Calculate number of needed rows for amount of football clubs
-        let numOfRows = data.length;
+          // calculate number of needed rows for amount of football clubs
+          let numOfRows = data.length;
+          // store html element in local variable for esaier referencing
+          let table = document.getElementById("clubsTable");
 
-        // Create a new row for each football club, displaying its name and nickname
-        for (let i = 0; i < numOfRows; i++) {
-          let newRow = clubsTable.insertRow(clubsTable.rows.length);
+          // create a new row for each football club, displaying its name and nickname
+          for (let i = 0; i < numOfRows; i++) {
+              let newRow = table.insertRow(table.rows.length);
           let cell1 = newRow.insertCell(0);
           let cell2 = newRow.insertCell(1);
         
@@ -55,10 +52,12 @@ function TwoTables() {
       
       // check that data has been received and then display in html table
       if (data) {
-      // Calculate number of needed rows for amount of football clubs
-        let numOfRows = data.length;
+          // calculate number of needed rows for amount of football clubs
+          let numOfRows = data.length;
+          // store html element in local variable for esaier referencing
+          let groundsTable = document.getElementById("groundsTable");
 
-        // Create a new row for each football club, displaying its name and nickname
+        // create a new row for each football club, displaying its name and nickname
         for (let i = 0; i < numOfRows; i++) {
           let newRow = groundsTable.insertRow(groundsTable.rows.length);
           let cell1 = newRow.insertCell(0);
@@ -83,12 +82,14 @@ function TwoTables() {
       function onSuccess(data) {
         // check that data has been received and then display in html table
         if (data) {
-          // Calculate number of needed rows for amount of football clubs
-          let numOfRows = data.length;
+            // calculate number of needed rows for amount of football clubs
+            let numOfRows = data.length;
+            // store html element in local variable for esaier referencing
+            let allDataTable = document.getElementById("allDataTable");
 
-          // Create a new row for each football club, displaying its name and nickname
+          // create a new row for each football club, displaying its name and nickname
           for (let i = 0; i < numOfRows; i++) {
-            let newRow = allDataTable.insertRow(clubsTable.rows.length);
+            let newRow = allDataTable.insertRow(allDataTable.rows.length);
             let cell1 = newRow.insertCell(0);
             let cell2 = newRow.insertCell(1);
             let cell3 = newRow.insertCell(2);
