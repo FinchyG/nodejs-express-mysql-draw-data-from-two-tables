@@ -113,15 +113,23 @@ function TwoTables() {
     // CONTROLLER FUNCTIONS
 
     this.viewClubsData = function () {
-      getClubsData();
+        // check that button hasn't already been clicked to display data
+        if (document.getElementById("clubsTable").rows.length === 1) {
+            getClubsData();
+        }
     };
 
     this.viewGroundsData = function () {
-      getGroundsData();
+        // check that button hasn't already been clicked to display data
+        if (document.getElementById("groundsTable").rows.length === 1) {
+            getGroundsData();
+        }
     };  
   
     this.viewAllData = function () {
-      getAllData();
+        // check that button hasn't already been clicked to display data
+        if (document.getElementById("allDataTable").rows.length === 1) {
+            getAllData();
+        }
     };
-    
 }
